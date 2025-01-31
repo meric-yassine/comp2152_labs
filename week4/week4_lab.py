@@ -174,6 +174,12 @@ loot = loot_options.pop(lootRoll -1)
 belt.append(loot)
 print("Your belt: ", belt )
 
+# Lab4 - Q7
+
+print("You got the loots, so organize your belt alphabetically!")
+belt.sort()
+print("Your belt: ", belt )
+
 
 input("Roll the dice for the health points (Press enter)")
 
