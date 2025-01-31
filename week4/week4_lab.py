@@ -180,6 +180,19 @@ print("You got the loots, so organize your belt alphabetically!")
 belt.sort()
 print("Your belt: ", belt )
 
+# Lab4 - Q8
+# Use the belt
+
+print("You see a Monster in distance! So, quickly use your first item!")
+first_item = belt.pop(0)
+if first_item in good_loot_options:
+    health_points = min(6, (health_points + 2))
+    print(f"You used the {first_item}, and your health has been changed to {health_points} points.")
+elif first_item in bad_loot_options:
+    health_points = max(0, (health_points - 2))
+    print(f"You used the {first_item}, and your health has been changed to {health_points} points.")
+else:
+    print(f"You used the {first_item}, but it was not helpful!")
 
 input("Roll the dice for the health points (Press enter)")
 
