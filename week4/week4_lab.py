@@ -164,6 +164,16 @@ loot = loot_options.pop(lootRoll -1)
 belt.append(loot)
 print("Your belt: ", belt )
 
+# Lab4 - Q6
+# Second item in the loot
+
+print("You found a loot bag! Look inside to find 2 items.")
+input("Roll for the second item (Press enter)")
+lootRoll = random.choice(range(1, len(loot_options) + 1))
+loot = loot_options.pop(lootRoll -1)
+belt.append(loot)
+print("Your belt: ", belt )
+
 
 input("Roll the dice for the health points (Press enter)")
 
