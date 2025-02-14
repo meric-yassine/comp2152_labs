@@ -1,6 +1,9 @@
 # Import the random library to use for the dice later
 import random
 
+from comp2152_labs.week6.lab06 import last_game
+
+
 # Will the line below print when you import function.py into main.py?
 # print("Inside function.py")
 
@@ -161,5 +164,18 @@ def load_game():
         print("    |    No previous game found. Starting a new game...")
         return None
 
-
 #Lab 06 - Question 5b
+
+def adjust_combat_strength(combat_strength, m_combat_strength):
+    last_line = load_game()
+    if last_game:
+        if "Hero" in last_game and "gained" in last_game:
+            num_starts = int(last_game.split()[-2])
+            if num_starts > 3:
+                print("    |    Increasing the monster combat strength")
+                m_combat_strength += 1
+            elif "Monster killed the hero" in last_game:
+                print("    |    Increasing the hero combat strength")
+                combat_strength += 1
+    else:
+        print("    |    ... Last game had no effect on Hero/Monster combat strength")

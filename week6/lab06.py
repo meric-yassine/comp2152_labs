@@ -6,6 +6,12 @@ import winner
 # Put all the functions into another file and import them
 import functions_lab06
 
+print("    --------------------------------------------------------------------")
+print("    |    Loading previous game data...")
+
+# Lab 06 - Question 5
+last_game = functions_lab06.load_game()
+
 # Game Flow
 # Define two Dice
 small_dice_options = list(range(1, 7))
