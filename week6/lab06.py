@@ -1,6 +1,8 @@
 # Import the random library to use for the dice later
 import random
 
+import winner
+
 # Put all the functions into another file and import them
 import functions_lab06
 
@@ -243,4 +245,7 @@ if not input_invalid:
     if not input_invalid:
         stars_display = "*" * num_stars
         print("    |    Hero " + short_name + " gets <" + stars_display + "> stars")
+
+        # Lab 06 - Question
+        functions_lab06.save_game(winner, hero_name=short_name, num_stars=num_stars)
 
